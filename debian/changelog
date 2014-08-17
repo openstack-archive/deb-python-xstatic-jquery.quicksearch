@@ -1,0 +1,5 @@
+python-xstatic-jquery.quicksearch (2.0.4.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #758402)
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 17 Aug 2014 14:50:20 +0800

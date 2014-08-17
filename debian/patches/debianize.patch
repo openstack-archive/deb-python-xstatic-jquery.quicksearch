@@ -1,0 +1,29 @@
+Description: Debianize the package
+ Using files from libjs-jquery.quicksearch instead of embedded files.
+Author: Thomas Goirand <zigo@debian.org>
+Forwarded: not-needed
+Last-Update: 2014-08-17
+
+--- python-xstatic-jquery.quicksearch-2.0.4.1.orig/xstatic/pkg/jquery_quicksearch/__init__.py
++++ python-xstatic-jquery.quicksearch-2.0.4.1/xstatic/pkg/jquery_quicksearch/__init__.py
+@@ -11,7 +11,7 @@ NAME = __name__.split('.')[-1] # package
+                                # please use a all-lowercase valid python
+                                # package name
+ 
+-VERSION = '2.0.3' # version of the packaged files, please use the upstream
++VERSION = '2.0.4' # version of the packaged files, please use the upstream
+                   # version number
+ BUILD = '1' # our package build number, so we can release new builds
+              # with fixes for xstatic stuff.
+@@ -34,9 +34,9 @@ HOMEPAGE = 'http://plugins.jquery.com/jq
+ LICENSE = '(same as %s)' % DISPLAY_NAME
+ 
+ from os.path import join, dirname
+-BASE_DIR = join(dirname(__file__), 'data')
++#BASE_DIR = join(dirname(__file__), 'data')
+ # linux package maintainers just can point to their file locations like this:
+-#BASE_DIR = '/usr/share/javascript/jquery_quicksearch'
++BASE_DIR = '/usr/share/javascript/jquery.quicksearch'
+ 
+ LOCATIONS = {
+     # CDN locations (if no public CDN exists, use an empty dict)
